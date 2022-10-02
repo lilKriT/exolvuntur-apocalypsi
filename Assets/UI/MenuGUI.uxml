@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Canvas" style="width: 100%; height: 100%; -unity-background-image-tint-color: rgb(0, 0, 0); background-color: rgb(0, 0, 0); align-items: center; justify-content: center;">
+        <ui:GroupBox name="MenuItems" style="width: 50%; max-width: 300px; font-size: 40px;">
+            <ui:Button text="Play" display-tooltip-when-elided="true" name="PlayButton" style="font-size: 40px; -unity-text-outline-width: 0;" />
+        </ui:GroupBox>
+        <ui:GroupBox name="Credits" style="font-size: 20px; -unity-text-align: upper-right; position: absolute; bottom: 25px; right: 25px; color: rgb(255, 255, 255); -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(198, 255, 252);">
+            <ui:Label text="Exolvuntur Apocalypsi" display-tooltip-when-elided="true" name="Label" />
+            <ui:Label text="created by: lilKriT" display-tooltip-when-elided="true" name="Label" />
+            <ui:Label text="for: Ludum Dare Compo 51" display-tooltip-when-elided="true" name="Label" />
+            <ui:Label text="using: Unity" display-tooltip-when-elided="true" name="Label" enable-rich-text="true" />
+        </ui:GroupBox>
+    </ui:VisualElement>
+</ui:UXML>
