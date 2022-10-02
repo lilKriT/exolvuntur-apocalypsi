@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Timer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    private Label timerLabel;
+
+    void OnEnable(){
+        var rootVisualElement = GetComponent<UIDocument>().rootVisualElement;
+
+        timerLabel = rootVisualElement.Q<Label>("TokensLabel");
+        // Debug.Log("Counter");
+        // player = GameObject.Find("Player");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Update(){
+        Debug.Log("!");
     }
 }
