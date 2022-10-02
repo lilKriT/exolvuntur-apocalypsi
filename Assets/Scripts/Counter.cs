@@ -24,8 +24,6 @@ public class Counter : MonoBehaviour
         var rootVisualElement = GetComponent<UIDocument>().rootVisualElement;
 
         counterLabel = rootVisualElement.Q<Label>("TokensLabel");
-        // Debug.Log("Counter");
-        // player = GameObject.Find("Player");
     }
 
     public void RefreshCounter(int tokens){
