@@ -5,14 +5,15 @@ using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
-    public int Tokens;
+    public int tokens;
 
     public UIDocument gui;
+    public Counter tokenCounterGUI;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        tokenCounterGUI = gui.GetComponent<Counter>();
     }
 
     // Update is called once per frame
@@ -22,8 +23,9 @@ public class Player : MonoBehaviour
     }
 
     public void AddToken(int value = 1){
-        Tokens += value;
-        Debug.Log("Tokens: " + Tokens);
+        tokens += value;
+        Debug.Log("Tokens: " + tokens);
         // Debug.Log("I got a token");
+        tokenCounterGUI.RefreshCounter(tokens);
     }
 }
