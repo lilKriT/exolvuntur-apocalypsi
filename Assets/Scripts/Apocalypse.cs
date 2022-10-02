@@ -31,7 +31,8 @@ public class Apocalypse : MonoBehaviour
     public void ApocalypseNow(){
         Debug.Log("Method: " + nextMethod);
         nextMethod = PickNextMethod();
-        FireRain();
+        // FireRain();
+        FloorSpikes();
     }
 
     public Method PickNextMethod(){
@@ -52,6 +53,14 @@ public class Apocalypse : MonoBehaviour
         } else {
             // Debug.DrawRay(player.transform.position, Vector3.forward * 100, Color.red, 2);
             // Debug.Log("DED");
+        }
+    }
+
+    public void FloorSpikes(){
+        if(player.transform.position.y > 3f){
+            Debug.Log("Not DED");
+        } else {
+            Debug.Log("DED");
         }
     }
 }
