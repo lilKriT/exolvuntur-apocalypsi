@@ -11,12 +11,10 @@ public class Timer : MonoBehaviour
         var rootVisualElement = GetComponent<UIDocument>().rootVisualElement;
 
         timerLabel = rootVisualElement.Q<Label>("TimerLabel");
-        // Debug.Log("Counter");
-        // player = GameObject.Find("Player");
     }
 
     void Update(){
-        Debug.Log("!");
+    
     }
 
     public void RefreshTimer(float timeLeft){

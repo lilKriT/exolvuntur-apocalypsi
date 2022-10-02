@@ -22,6 +22,11 @@ public class CountDown : MonoBehaviour
     void Update()
     {
         timeLeft -= Time.deltaTime;
+        if(timeLeft <= 0){
+            timeLeft = countDownTime;
+            Debug.Log("Cataclysm!");
+        }
+
         timerGUI.RefreshTimer(timeLeft);
     }
 }
