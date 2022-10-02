@@ -20,4 +20,10 @@ public class Player : MonoBehaviour
     {
         
     }
+
+    public void AddToken(int value = 1){
+        Tokens += value;
+        Debug.Log("Tokens: " + Tokens);
+        // Debug.Log("I got a token");
+    }
 }
