@@ -22,7 +22,13 @@ public class PlayerMovement : MonoBehaviour
     float verticalInput;
     Vector3 moveDirection;
 
-    // public 
+    public float jumpForce;
+    public float jumpCooldown;
+    public float airMultiplier;
+    bool readyToJump = true;
+
+    [Header("Keybinds")]
+    public KeyCode jumpKey = KeyCode.Space;
 
     // Start is called before the first frame update
     void Start()
@@ -56,12 +62,24 @@ public class PlayerMovement : MonoBehaviour
     private void MyInput(){
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
+
+        // Jumping
+        if(Input.GetKey(jumpKey) && readyToJump && grounded){
+            readyToJump = false;
+            Jump();
+
+            Invoke(nameof(ResetJump), jumpCooldown);
+        }
     }
 
     private void MovePlayer(){
         // Calculate movement
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-        rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+        if(grounded){
+            rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+        } else if (!grounded) {
+            rb.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+        }
     }
 
     private void SpeedControl(){
@@ -71,5 +89,15 @@ public class PlayerMovement : MonoBehaviour
             Vector3 limitedVel = flatVel.normalized * moveSpeed;
             rb.velocity = limitedVel;
         }
+    }
+
+    private void Jump(){
+        rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+
+        rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+    }
+
+    private void ResetJump(){
+        readyToJump = true;
     }
 }
