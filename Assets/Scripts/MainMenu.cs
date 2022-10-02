@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     private Button playButton;
+    private Button quitButton;
 
     // Start is called before the first frame update
     void Start()
@@ -25,10 +26,15 @@ public class MainMenu : MonoBehaviour
 
         playButton = rootVisualElement.Q<Button>("PlayButton");
         playButton.RegisterCallback<ClickEvent>(PlayGame);
+        quitButton.RegisterCallback<ClickEvent>(QuitGame);
     }
 
     public void PlayGame(ClickEvent evt){
         // Debug.Log("Play");
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Level01");
+    }
+
+    public void QuitGame(ClickEvent evt){
+            Application.Quit();
     }
 }
