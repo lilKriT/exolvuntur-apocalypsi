@@ -1,12 +1,12 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:VisualElement name="TimerContainer" style="align-items: center; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
         <ui:VisualElement name="Timer" style="height: auto; width: 180px; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; background-color: rgba(0, 0, 0, 0.3); border-left-color: rgba(0, 0, 0, 0.5); border-right-color: rgba(0, 0, 0, 0.5); border-top-color: rgba(0, 0, 0, 0.5); border-bottom-color: rgba(0, 0, 0, 0.5); align-items: stretch;">
-            <ui:Label text="10.00s" display-tooltip-when-elided="true" style="align-items: stretch; -unity-text-align: upper-center; font-size: 40px;" />
+            <ui:Label text="10.00s" display-tooltip-when-elided="true" name="TimerLabel" style="align-items: stretch; -unity-text-align: upper-center; font-size: 40px;" />
         </ui:VisualElement>
     </ui:VisualElement>
     <ui:VisualElement style="bottom: 10px; position: absolute; right: 10px;">
         <ui:VisualElement name="Coins" style="padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; background-color: rgba(0, 0, 0, 0.3);">
-            <ui:Label text="Coins: 0" display-tooltip-when-elided="true" style="font-size: 36px;" />
+            <ui:Label text="Coins: 0" display-tooltip-when-elided="true" name="TokensLabel" style="font-size: 36px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
