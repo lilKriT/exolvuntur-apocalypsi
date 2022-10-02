@@ -24,6 +24,7 @@ public class Token : MonoBehaviour
             // Debug.Log("Token Picked up");
             Player p = collider.transform.parent.GetComponent<Player>();
             p.AddToken(value);
+            Destroy(this.gameObject);
         }
     }
 }
