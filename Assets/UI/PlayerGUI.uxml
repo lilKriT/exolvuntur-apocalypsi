@@ -4,6 +4,11 @@
             <ui:Label text="10.00s" display-tooltip-when-elided="true" name="TimerLabel" style="align-items: stretch; -unity-text-align: upper-center; font-size: 40px;" />
         </ui:VisualElement>
     </ui:VisualElement>
+    <ui:VisualElement name="NextMethod" style="margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; align-items: center;">
+        <ui:VisualElement style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; -unity-background-image-tint-color: rgba(0, 0, 0, 0.3);">
+            <ui:Label text="Next Method" display-tooltip-when-elided="true" name="MethodLabel" style="font-size: 40px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
     <ui:VisualElement style="bottom: 10px; position: absolute; right: 10px;">
         <ui:VisualElement name="Coins" style="padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; background-color: rgba(0, 0, 0, 0.3);">
             <ui:Label text="Coins: 0" display-tooltip-when-elided="true" name="TokensLabel" style="font-size: 36px;" />

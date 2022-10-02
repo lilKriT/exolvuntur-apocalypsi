@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     float verticalInput;
     Vector3 moveDirection;
 
+    // public 
+
     // Start is called before the first frame update
     void Start()
     {
